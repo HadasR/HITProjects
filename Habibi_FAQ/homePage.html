@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="" />
+
+        <!-- CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
+        <!--Bootstrap 3 css file-->
+        <link href="Bootstrap/css/bootstrap.css" rel="stylesheet" />
+        <!--Bootstrap non-responsive css file (just add class "non-responsive" to the body tag)-->
+        <link href="Bootstrap/css/bootstrap-non-responsive.css" rel="stylesheet" />
+        <!--Bootstrap fixes for hebrew (add class='rtl' to the body tag)-->
+        <link href="Bootstrap/css/bootstrap-rtl.css" rel="stylesheet" />
+        <!--Bootstrap them - for changing the shape and colors of bootstrap objects like buttons-->
+        <!--<link href="Bootstrap/css/bootstrap-theme.css" rel="stylesheet" />-->
+        <!--The only file you should right your css-->
+        <link href="Styles/myStyle.css" rel="stylesheet" />
+
+        <!-- Scripts -->
+        <!--jQuery library-->
+        <script src="jScripts/jquery-1.10.2.min.js"></script>
+        <!--Bootstrap library-->
+        <script src="Bootstrap/js/bootstrap.min.js"></script>
+    </head>
+
+    <body class="rtl">
+        <header><img id="logo" src="images/logo.jpg"/>
+        </header>
+        <div id="container" class="container-fluid">
+            <h1>היי דיויד! <br/> במה אפשר לעזור לך?</h1>
+            <div class="row">
+                <div class="col-sm-10 col-md-10 col-sm-offset-1">
+                    <form class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input id="searchTxt" type="text" class="form-control" placeholder="אפשר לכתוב שאלה או מילת חיפוש" name="q">
+                            <div class="input-group-btn">
+                                <button id="searchBtn" class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="navContainer">
+                <ul id="mainNav">
+                    <li><a href="index.htm"><img class="homePageIcon" src="images/signIn.svg"/>התחברות</a></li>
+                    <li><a href="#menu1"><img class="homePageIcon" src="images/manualChange.svg"/>דיווח ידני</a></li>
+                    <li><a href="#menu2"><img class="homePageIcon" src="images/occasion.svg"/>דיווח אירוע</a></li>
+                    <li><a href="#menu3"><img class="homePageIcon" src="images/reports.svg"/>דוחות</a></li>
+                    <li><a href="#menu4"><img class="homePageIcon" src="images/help.svg"/>עזרה</a></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+
+</html>

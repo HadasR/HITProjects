@@ -1,0 +1,163 @@
+
+body{
+    min-height: 100vh;
+    background: #376D6D; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#376D6D, #505152); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#376D6D, #505152); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#376D6D, #505152); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#376D6D, #505152); /* Standard syntax (must be last) */
+}
+
+header{
+    background-color:white;
+    height: 5vh;
+    margin-bottom: 30px;
+}
+
+body, div, h1, h2, h3, h4{
+    font-family: 'Assistant', sans-serif !important;
+}
+
+#accordion .glyphicon { margin-right:10px; }
+.panel-body { padding:0px; }
+.panel-body table tr td { padding-left: 15px }
+.panel-body .table {margin-bottom: 0px; }
+
+h4 a{
+    font-size: 3vw;
+}
+
+.panel-body{
+    font-size: 2.5vw;
+    padding: 12px;
+}
+
+#changePasswordPic{
+    height: 500px;
+}
+
+#logo{
+    height: 4vh;
+}
+
+#container{
+    max-width: 960px;
+}
+
+ul.nav li{
+    font-size: 3vw;
+}
+
+/*
+ul.nav li a{
+color:white;
+}
+*/
+
+/*
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus, .unselected {
+color: #505152;
+background-color:  #fff;
+font-weight: bold;
+}
+*/
+
+
+a:focus {
+    color: #396b6b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+/*---------------------home page-------------------------*/
+h1{
+    color: white;
+    text-align: CENTER;
+    font-size: 5vh;
+    margin: 5vh;
+}
+
+#mainNav{
+    list-style: none; 
+    margin-top: 3vh;
+}
+
+#mainNav li a{
+    background-color: white;
+    display: inline-block;
+    height: 25vw;
+    width: 25vw;
+    border-radius: 25vw;
+    font-size: 4vw;
+    text-align: center;
+    color: #505152;
+    margin: 20px;
+}
+
+#navBar{
+    height: 76px;
+    background-color: #3f4142;
+    position: absolute;
+    padding: 0px !important;
+    margin-top: 73px;
+}
+
+.selected{
+    background-color: white !important;
+    display: inline-block;
+    height: 20vw;
+    width: 20vw;
+    border-radius: 25vw;
+    font-size: 3.5vw;
+    text-align: center;
+    color: #505152 !important;
+    margin: 10px;
+    font-weight: bold;
+    border: 3px solid #62c7c7;
+
+}
+
+.selected img {
+    height: 7vw;
+    display: block;
+    margin: 3vw auto 0vw auto;
+}
+
+.unselected {
+    color: #505152;
+    background-color: #f5f5f5;
+    margin: 84px 5px 55px 5px;
+    border-radius: 5px;
+}
+
+.unselected img{
+    height: 3vh;
+    margin-left: 1vw;
+}
+
+.homePageIcon{
+    height: 10vw;
+    display: block;
+    margin: 4vw auto 1vw auto;
+}
+
+.innerPageIcon{
+    height: 3vh;
+    margin-left: 1vw;
+}
+
+ul{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px;
+}
+
+#searchTxt, #searchBtn{
+    height: 50px;
+    font-size: 2.5vh;
+}
+
+
