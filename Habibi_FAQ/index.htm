@@ -17,11 +17,10 @@
         <link href="Bootstrap/css/bootstrap-non-responsive.css" rel="stylesheet" />
         <!--Bootstrap fixes for hebrew (add class='rtl' to the body tag)-->
         <link href="Bootstrap/css/bootstrap-rtl.css" rel="stylesheet" />
-        <!--Bootstrap them - for changing the shape and colors of bootstrap objects like buttons-->
-        <!--<link href="Bootstrap/css/bootstrap-theme.css" rel="stylesheet" />-->
-        <!--The only file you should right your css-->
         <link href="Styles/myStyle.css" rel="stylesheet" />
-
+<!--        <link href="Styles/font-awesome.min.css" rel="stylesheet" type="text/css" />-->
+        <link href="dist/hamburgers.css" rel="stylesheet" />
+        
         <!-- Scripts -->
         <!--jQuery library-->
         <script src="jScripts/jquery-1.10.2.min.js"></script>
@@ -30,13 +29,14 @@
         <script src="jScripts/javaScript.js"></script>
     </head>
 
-    <body class="rtl">
+    <body class="rtl" onload="onPageLoad()">
         <header><a href="homePage.html"><img id="logo" src="images/logo.jpg"/></a>
+            <i class="fa fa-bars" aria-hidden="true"></i>
         </header>
         <div id="container" class="container-fluid">
 
             <div class="row">
-                <div class="col-sm-9 col-md-9 col-sm-offset-3">
+                <div class="col-sm-10 col-md-10 col-sm-offset-1">
                     <form class="navbar-form" role="search">
                         <div class="input-group">
                             <input id="searchTxt" type="text" class="form-control" placeholder="אפשר לכתוב שאלה או מילת חיפוש" name="q">
@@ -51,15 +51,15 @@
                 <div id="navBar" class="col-sm-12"></div>
             </div>
             <ul class="nav">
-                <li><a class="selected" data-toggle="pill" href="#home"><img src="images/signIn.svg"/>התחברות</a></li>
-                <li><a class="unselected" data-toggle="pill" href="#menu1"><img src="images/manualChange.svg"/>דיווח ידני</a></li>
-                <li><a class="unselected" data-toggle="pill" href="#menu2"><img src="images/occasion.svg"/>דיווח אירוע</a></li>
-                <li><a class="unselected" data-toggle="pill" href="#menu3"><img src="images/reports.svg"/>דוחות</a></li>
-                <li><a class="unselected" data-toggle="pill" href="#menu4"><img src="images/help.svg"/>עזרה</a></li>
+                <li class="liNavBar liSelected"><a id="a1" class="aNavBar selected" data-toggle="pill" href="#1"><img src="images/signIn.svg"/>התחברות</a></li>
+                <li class="liNavBar"><a id="a2" class="aNavBar unselected" data-toggle="pill" href="#2"><img src="images/manualChange.svg"/>דיווח ידני</a></li>
+                <li class="liNavBar"><a id="a3" class="aNavBar unselected" data-toggle="pill" href="#3"><img src="images/occasion.svg"/>דיווח אירוע</a></li>
+                <li class="liNavBar"><a id="a4" class="aNavBar unselected" data-toggle="pill" href="#4"><img src="images/reports.svg"/>דוחות</a></li>
+                <li class="liNavBar"><a id="a5" class="aNavBar unselected" data-toggle="pill" href="#5"><img src="images/help.svg"/>תקלות</a></li>
             </ul>
 
             <div class="tab-content">
-                <div id="home" class="tab-pane fade in active">
+                <div id="1" class="tab-pane fade in active">
 
                     <div class="row">
                         <div class="col-sm-12 col-md-12">
@@ -67,7 +67,7 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">קיבלתי מהמנהל שלי סיסמה מוזרה שקשה לי לזכור, מה אני עושה?</a>
+                                            <a class="aQuestions" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">קיבלתי מהמנהל שלי סיסמה מוזרה שקשה לי לזכור, מה אני עושה?</a>
                                         </h4>
                                     </div>
                                     <div id="collapseOne" class="panel-collapse collapse">
@@ -76,14 +76,14 @@
                                                 אל דאגה! אפשר לשנות את הסיסמה. צריך רק להיכנס לעמוד "הפרופיל שלי", ללחוץ על "שינוי סיסמה" ולבחור סיסמה חדשה. ואם את/ה כבר שם, אפשר גם להעלות תמונת פרופיל, סתם בשביל הכיף :)
                                             </div>
                                             <div class="col-sm-6">
-                                                <img id="changePasswordPic" src="images/pic1.PNG"/></div>
+                                                <img id="changePasswordPic" class="answerPic" src="images/pic1.PNG"/></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">שכחתי את הסיסמה שלי, מה עושים?</a>
+                                            <a class="aQuestions" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">שכחתי את הסיסמה שלי, מה עושים?</a>
                                         </h4>
                                     </div>
                                     <div id="collapseTwo" class="panel-collapse collapse">
@@ -96,7 +96,7 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">בכל פעם שאני נכנס/ת לאפליקציה, היא מבקשת ממני להתחבר מחדש וזה מעצבן! למה היא לא זוכרת אותי?</a>
+                                            <a class="aQuestions" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">בכל פעם שאני נכנס/ת לאפליקציה, היא מבקשת ממני להתחבר מחדש וזה מעצבן! למה היא לא זוכרת אותי?</a>
                                         </h4>
                                     </div>
                                     <div id="collapseThree" class="panel-collapse collapse">
@@ -105,35 +105,192 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!--
-<div class="panel panel-default">
-<div class="panel-heading">
-<h4 class="panel-title">
-<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-file">
-</span>Reports</a>
-</h4>
-</div>
-<div id="collapseFour" class="panel-collapse collapse">
-<div class="panel-body">
-
-</div>
-</div>
-</div>
--->
                             </div>
                         </div>
 
                     </div>
                 </div>
 
-                <div id="menu1" class="tab-pane fade">
-                    <h3>Menu 1</h3>
-                    <p>Some content in menu 1.</p>
+                <div id="2" class="tab-pane fade">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12">
+                            <div class="panel-group" id="accordion2">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a class="aQuestions" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2">שכחתי להפעיל את השעון כשהגעתי ללקוח. מה אני עושה?</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseOne2" class="panel-collapse collapse">
+                                        <div class="panel-body row">
+                                            <div class="col-sm-6">
+                                                אל דאגה! אפשר לשנות את הסיסמה. צריך רק להיכנס לעמוד "הפרופיל שלי", ללחוץ על "שינוי סיסמה" ולבחור סיסמה חדשה. ואם את/ה כבר שם, אפשר גם להעלות תמונת פרופיל, סתם בשביל הכיף
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <img id="changePasswordPic" src="images/pic1.PNG"/></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a class="aQuestions" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2">הפעלתי את השעון בשעה לא נכונה. איך אפשר לתקן את זה?</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwo2" class="panel-collapse collapse">
+                                        <div class="panel-body">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a class="aQuestions" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree2">שכחתי לכבות את השעון כשיצאתי מהלקוח, מה אני עושה?</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseThree2" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            זה קשור בכלל לאבטחה, ולא ליכולות של האפליקציה. בעמוד ההגדרות ניתן להגדיר האם דרושה סיסמה בכל הפעלה של האפליקציה, כדי למנוע ממישהו אחר להזין נוכחות בשמך. אפשר לשנות את ההגדרה הזו כך שלא יהיה צורך להזין סיסמה בכל פעם מחדש.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
-                <div id="menu2" class="tab-pane fade">
-                    <h3>Menu 2</h3>
-                    <p>Some content in menu 2.</p>
+                <div id="3" class="tab-pane fade">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12">
+                            <div class="panel-group" id="accordion3">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a class="aQuestions" data-toggle="collapse" data-parent="#accordion3" href="#collapseOne3">הבן שלי חולה. איך אני מדווח/ת על זה במערכת?</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseOne3" class="panel-collapse collapse">
+                                        <div class="panel-body row">
+                                            <div class="col-sm-6">
+                                                אל דאגה! אפשר לשנות את הסיסמה. צריך רק להיכנס לעמוד "הפרופיל שלי", ללחוץ על "שינוי סיסמה" ולבחור סיסמה חדשה. ואם את/ה כבר שם, אפשר גם להעלות תמונת פרופיל, סתם בשביל הכיף :)
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <img id="changePasswordPic" src="images/pic1.PNG"/></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a class="aQuestions" data-toggle="collapse" data-parent="#accordion3" href="#collapseTwo3">דיווחתי שהבן שלי חולה. איפה אני רואה את הדיווח?</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwo3" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            בעמוד ההתחברות ניתן ללחוץ על כפתור "שכחתי סיסמא" ולהזין את כתובת המייל שלך. ישלח אליך מייל עם סיסמה זמנית איתה ניתן להתחבר לאפליקציה. לא לשכוח לעדכן את הסיסמה לסיסמה חדשה.
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a class="aQuestions" data-toggle="collapse" data-parent="#accordion3" href="#collapseThree3">בטעות דיווחתי שאני חולה במקום שהבן שלי חולה. איך אני משנה את הדיווח?</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseThree3" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            זה קשור בכלל לאבטחה, ולא ליכולות של האפליקציה. בעמוד ההגדרות ניתן להגדיר האם דרושה סיסמה בכל הפעלה של האפליקציה, כדי למנוע ממישהו אחר להזין נוכחות בשמך. אפשר לשנות את ההגדרה הזו כך שלא יהיה צורך להזין סיסמה בכל פעם מחדש.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a class="aQuestions" data-toggle="collapse" data-parent="#accordion3" href="#collapseFour3">איך אני מעלה את אישור המחלה שלי לאפליקציה?</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseFour3" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            זה קשור בכלל לאבטחה, ולא ליכולות של האפליקציה. בעמוד ההגדרות ניתן להגדיר האם דרושה סיסמה בכל הפעלה של האפליקציה, כדי למנוע ממישהו אחר להזין נוכחות בשמך. אפשר לשנות את ההגדרה הזו כך שלא יהיה צורך להזין סיסמה בכל פעם מחדש.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="4" class="tab-pane fade">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12">
+                            <div class="panel-group" id="accordion4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a class="aQuestions" data-toggle="collapse" data-parent="#accordion4" href="#collapseOne4">איך אפשר לראות את כל השעות והמשימות שלי מהחודש?</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseOne4" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            בעמוד הראשי של האפליקציה לוחצים על כפתור "דוחות". בתוך עמוד "דוחות" ניתן לראות את דוח השעות ואת דוח המשימות של החודש. בתחתית הדוח מופיע סיכום שעות העבודה של כל החודש. ליד כל יום יופיעו גם ההערות שכתבת עבור אותו היום. ניתן לסדר את הימים בחודש מההתחלה לסוף או מהסוף להתחלה. במידה ויש צורך, ניתן לערוך או להוסיף משימות באופן ידני בעמוד זה.
+                                        </div>
+                                    </div>
+                                </div>    
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a class="aQuestions" data-toggle="collapse" data-parent="#accordion4" href="#collapseTwo4">אני רוצה לשמור במחשב שלי את דוח השעות. איך אפשר לעשות את זה?</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwo4" class="panel-collapse collapse">
+                                        <div class="panel-body row">
+                                            <div class="col-sm-6">
+                                                ניתן לשלוח את דוח השעות או המשימות של החודש (וגם של חודשים קודמים) לכתובת המייל שלך. בעמוד "דוחות", לוחצים על הכפתור שנראה כמו מטוס קטן מנייר ומזינים את כתובת המייל הרצויה. אל המייל שלך ישלח הדוח כקובץ PDF אותו ניתן לשמור במחשב. 
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <img class="answerPic" src="images/pic1.PNG"/></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a class="aQuestions" data-toggle="collapse" data-parent="#accordion4" href="#collapseThree4">מי יכול לראות את הדוחות שלי?</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseThree4" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            אל דאגה! הדוחות האישיים שלך נגישים רק לך ולמנהל הישיר שלך. בסוף החודש הם יגיעו גם לחשב השכר. אף אחד אחר לא יכול לראות אותם.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a class="aQuestions" data-toggle="collapse" data-parent="#accordion4" href="#collapseFour4">איך אפשר לראות דוחות מחודשים קודמים?</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseFour4" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            בעמוד "דוחות" ניתן לדפדף בין החודשים השונים והשנים השונות וכך לראות את כל הדוחות שלך שקיימים במערכת.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="5" class="tab-pane fade">
+                    <h3>נתקלתם בבעיה שאתם לא מצליחים לפתור?</h3>
+                    <p>בתפריט האפליקציה קיים עמוד "צריכים עזרה?" שמאפשר פתיחת קריאה לצוות התמיכה הטכנית של "חביבי" שיעמדו לשירותך ויעזרו לפתור את הבעיה. לאחר פתיחת הקריאה, צוות התמיכה הטכנית ייצור איתך קשר תוך 24 שעות.</p>
                 </div>
             </div>
 
