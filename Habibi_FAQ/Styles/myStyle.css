@@ -51,7 +51,7 @@ ul.nav li{
     font-size: 3vw;
 }
 
-a.aQuestions:focus {
+a.aQuestions:focus, a.aQuestions:active, a.aQuestions:hover {
     color: #396b6b;
     text-decoration: none;
     font-weight: bold;
@@ -66,18 +66,6 @@ h1{
     font-size: 5vh;
     margin: 5vh;
 }
-
-/*
-.hamburgerMenu{
-    position: absolute;
-        margin: -82px 683px !important;    
-    left:0;
-}
-
-.hamburgerMenu:focus{
-    outline: transparent;
-}
-*/
 
 #mainNav{
     list-style: none; 
@@ -110,9 +98,9 @@ h1{
 .selected{
     background-color: white !important;
     display: inline-block;
-    height: 18vw;
-    width: 18vw;
-    border-radius: 25vw;
+    height: 19vw;
+    width: 19vw;
+    border-radius: 50%;
     font-size: 2.8vw;
     text-align: center;
     color: #505152 !important;
@@ -180,9 +168,9 @@ ul{
     display:flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-pack: right;
-    -ms-flex-pack: right;
-    justify-content: right;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     padding: 0px;
 }
 
@@ -206,32 +194,6 @@ ul{
 
 #div5 p{
     font-size: 2.5vw;
-}
-
-.menuClose{
-    position: absolute;
-    background-color: white;
-    width: 40vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    z-index: 4;
-    /*    float:left;*/
-    /*    margin-right:-60vw;*/
-    -webkit-transform: translateX(-40vw);
-    transform: translateX(-40vw);
-}
-
-.menuOpen{
-    -webkit-transform: translate(0);
-    transform: translate(0);
-    /*    left: 0;*/
-}
-
-#menuHeader{
-    height: 20vh;
-    background-color: #32c9e8;
-    padding: 2vh;
 }
 
 #userName{
