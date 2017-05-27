@@ -3,17 +3,15 @@ body{
     min-height: 100vh;
     max-width: 900px;
     margin: 0 auto;
-    background: #376D6D; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#376D6D, #505152); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#376D6D, #505152); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#376D6D, #505152); /* For Firefox 3.6 to 15 */
+    background: #376D6D; /* For browsers that do not support gradients */ /* For Safari 5.1 to 6.0 */ /* For Opera 11.1 to 12.0 */ /* For Firefox 3.6 to 15 */
+    background: -webkit-gradient(linear, left top, left bottom, from(#376D6D), to(#505152));
     background: linear-gradient(#376D6D, #505152); /* Standard syntax (must be last) */
     direction:rtl;
 }
 
 header{
     background-color:white;
-    height: 5vh;
+    height: 7vh;
     margin-bottom: 30px;
 }
 
@@ -41,8 +39,9 @@ h4 a{
 
 #logo{
     height: 3.3vh;
-    margin: 9px 554px;
-    position: absolute;}
+    float: left;
+    margin: 1.7vh 2vh;
+}
 
 #container{
     max-width: 960px;
@@ -51,21 +50,6 @@ h4 a{
 ul.nav li{
     font-size: 3vw;
 }
-
-/*
-ul.nav li a{
-color:white;
-}
-*/
-
-/*
-.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus, .unselected {
-color: #505152;
-background-color:  #fff;
-font-weight: bold;
-}
-*/
-
 
 a.aQuestions:focus {
     color: #396b6b;
@@ -83,19 +67,23 @@ h1{
     margin: 5vh;
 }
 
+/*
 .hamburgerMenu{
     position: absolute;
-/*    margin: -82px 683px !important;    */
+        margin: -82px 683px !important;    
     left:0;
 }
 
 .hamburgerMenu:focus{
     outline: transparent;
 }
+*/
 
 #mainNav{
     list-style: none; 
     margin-top: 3vh;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -125,26 +113,15 @@ h1{
     height: 18vw;
     width: 18vw;
     border-radius: 25vw;
-    font-size: 3vw;
+    font-size: 2.8vw;
     text-align: center;
     color: #505152 !important;
     margin: 22px 5px;
     font-weight: bold;
-    border: 6px solid #3f4142;    
-    /*
-    -webkit-transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
-    */
+    border: 6px solid #3f4142;
 }
 
-/*
-.liSelected{
-order: 1; 
-} 
-*/
+
 
 .selected img {
     height: 5.5vw;
@@ -158,13 +135,7 @@ order: 1;
     margin: 84px 5px 55px 5px;
     border-radius: 5px;
     font-size: 2vh;
-    /*
-    -webkit-transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
-    */
+/*        height: 5vh;*/
 }
 
 .unselected img{
@@ -174,6 +145,22 @@ order: 1;
 
 .aNavBar img{
     pointer-events: none;
+}
+
+.aNavBar{
+/*        -webkit-transition: height 900ms ease;
+    -moz-transition: height 900ms ease;
+    -ms-transition: height 900ms ease;
+    -o-transition: height 900ms ease;
+    transition: height 900ms ease;
+
+
+    -webkit-transition: width 900ms ease;
+    -moz-transition: width 900ms ease;
+    -ms-transition: width 900ms ease;
+    -o-transition: width 900ms ease;
+    transition: width 900ms ease;
+*/
 }
 
 .homePageIcon{
@@ -188,8 +175,13 @@ order: 1;
 }
 
 ul{
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: right;
+    -ms-flex-pack: right;
     justify-content: right;
     padding: 0px;
 }
@@ -224,18 +216,16 @@ ul{
     top: 0;
     left: 0;
     z-index: 4;
-/*    float:left;*/
-/*    margin-right:-60vw;*/
+    /*    float:left;*/
+    /*    margin-right:-60vw;*/
+    -webkit-transform: translateX(-40vw);
     transform: translateX(-40vw);
 }
 
-/*.menuClose2{*/
-/*    transform: translateX(-40vw);*/
-/*    display:none;*/
-/*}*/
 .menuOpen{
+    -webkit-transform: translate(0);
     transform: translate(0);
-/*    left: 0;*/
+    /*    left: 0;*/
 }
 
 #menuHeader{
@@ -245,21 +235,26 @@ ul{
 }
 
 #userName{
-    color: white;
+    color: #4f5253;
     font-size: 2.8vh;
     text-align: center;
-    display: block;
+    position: absolute;
+    margin: 1.5vh 8vh;
+    font-weight: bold;
 }
 
 #job{
-    margin-top: -0.7vh;
     font-size: 2.3vh;
-    display: block;}
+    font-weight: normal;
+    padding-right: 1vw;
+}
 
 #profilePic{
-    height: 10vh;
-    margin: 0 auto;
-    display: block;
+    height: 5vh;
+    position: absolute;
+    /* border: 3px solid #3b6969; */
+    /* border-radius: 50%; */
+    margin: 1.2vh;
 }
 
 #menuMiddle, #menuBottom{
