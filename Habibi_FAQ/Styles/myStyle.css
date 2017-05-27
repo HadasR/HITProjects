@@ -125,7 +125,7 @@ h1{
     height: 18vw;
     width: 18vw;
     border-radius: 25vw;
-    font-size: 3.1vw;
+    font-size: 3vw;
     text-align: center;
     color: #505152 !important;
     margin: 22px 5px;
@@ -199,20 +199,20 @@ ul{
     font-size: 2.5vh;
 }
 
-#5{
+#div5{
     background-color: white;
     padding: 20px;
     border-radius: 5px;
 }
 
-#5 h3{
+#div5 h3{
     margin-top: 0px;
     font-weight: bold;
     margin-bottom: 15px;
     text-align: center;
 }
 
-#5 p{
+#div5 p{
     font-size: 2.5vw;
 }
 
@@ -229,10 +229,10 @@ ul{
     transform: translateX(-40vw);
 }
 
-.menuClose2{
+/*.menuClose2{*/
 /*    transform: translateX(-40vw);*/
 /*    display:none;*/
-}
+/*}*/
 .menuOpen{
     transform: translate(0);
 /*    left: 0;*/
