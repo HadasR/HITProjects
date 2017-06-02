@@ -123,7 +123,7 @@ h1{
     margin: 84px 5px 55px 5px;
     border-radius: 5px;
     font-size: 2vh;
-/*        height: 5vh;*/
+    /*        height: 5vh;*/
 }
 
 .unselected img{
@@ -136,7 +136,7 @@ h1{
 }
 
 .aNavBar{
-/*        -webkit-transition: height 900ms ease;
+    /*        -webkit-transition: height 900ms ease;
     -moz-transition: height 900ms ease;
     -ms-transition: height 900ms ease;
     -o-transition: height 900ms ease;
@@ -148,7 +148,7 @@ h1{
     -ms-transition: width 900ms ease;
     -o-transition: width 900ms ease;
     transition: width 900ms ease;
-*/
+    */
 }
 
 .homePageIcon{
@@ -226,4 +226,42 @@ ul{
 #menuBottom{
     position: absolute;
     bottom: 0;
+}
+
+.plusIcon {
+    width: 2.8vh;
+    height: 2.8vh;
+    float: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: -0.3vh -0.8vh;
+}
+
+a.aQuestions .plusIcon{
+    background-image: url(../images/minus.png);
+}
+
+a.collapsed .plusIcon{
+    background-image: url(../images/plus.png);
+}
+
+#ipad{
+    background-image: url(../images/ipadmini.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 673px;
+    height: 982px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+
+iframe{
+    position: absolute;
+    margin: 0px auto;
+    display: block;
+    top: 98px;
+    right: 38px;
+    width: 600px;
+    height: 785px;
 }
