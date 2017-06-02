@@ -1,0 +1,28 @@
+/*
+body{
+    min-height: 100vh;
+    max-width: 900px;
+    margin: 0 auto;
+    direction:rtl;
+}*/
+
+#ipad{
+    background-image: url(../images/ipadmini.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 839px;
+    height: 1225px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+
+iframe{
+    position: absolute;
+    margin: 0px auto;
+    display: block;
+    top: 98px;
+    right: 23px;
+    width: 795px;
+    height: 1016px;
+}
